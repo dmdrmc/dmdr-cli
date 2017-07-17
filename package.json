@@ -1,0 +1,29 @@
+{
+  "name": "dmdr-cli",
+  "version": "0.0.1",
+  "description": "a centralized demodern command line tool",
+  "main": "index.js",
+  "bin": {
+    "dmdr": "./dmdr.js"
+  },
+  "scripts": {
+    "start": "./dmdr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmdrmc/dmdr-cli.git"
+  },
+  "keywords": [
+    "dmdr",
+    "cli",
+    "iconfont"
+  ],
+  "author": "markus cecot <mc@demodern.de>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "glob": "^7.1.2",
+    "webfonts-generator": "^0.4.0"
+  }
+}
