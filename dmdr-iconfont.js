@@ -16,11 +16,14 @@ Handlebars.registerHelper('strip_hashtag', (src) => {
 
 const getOptions = (dest,options,icons) => {
   let fontName = options.fontname;
+  console.log("dest:"+dest)
+  console.log("dest:"+options.destination)
+  dest = path.join(dest,options.destination,fontName);
   console.log("prefix:"+options.prefix)
   return {
     html:  true,
     htmlTemplate: path.join(__dirname, 'templates', 'html.hbs'),
-    dest: path.join(dest,fontName),
+    dest: dest,
     files: icons,
     embed: false,
     fontName: fontName,
@@ -118,6 +121,11 @@ program
     "-f, --fontname <fontname>",
     "name of the iconfont",
     "dmdr-icons"
+  )
+  .option(
+    "-d, --destination <destinationFolder>",
+    "folder for the resulting files",
+    "dist"
   )
   .option(
     "-p, --prefix <prefix>",
